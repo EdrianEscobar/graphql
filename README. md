@@ -29,4 +29,6 @@ instalar las dependencias --> npm install
 ejecutar react --> npm start
 dirección --> http://localhost:3000
 
-
+para ejuctar con react deben estar levantados los servidores de node y json-server
+node src/index.js
+json-server --watch db.json
