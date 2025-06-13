@@ -1,0 +1,32 @@
+# GraphQL CRUD App 
+
+Aplicación de ejemplo que consume una API REST desde GraphQL y la expone a un cliente React, con 3 formas de ejecución:
+
+##  Tecnologías
+
+- Node.js + Apollo Server (GraphQL)
+- json-server (API REST simulada)
+- React + Apollo Client
+- Docker + Docker Compose
+
+## OPCIÓN 1 – Ejecutar servicios por separado (modo local)
+
+### Iniciar API REST
+
+node src/index.js --> para levantar el servidor de node en la dirección http://localhost:4000
+json-server --watch db.json --port 3001 --> para levantar el servidor de json server en el puerto: 3001
+
+## OPCIÓN 2 – Ejecutar todo con Docker
+
+docker-compose up --build --> construye el contenedor y se sigue ejecutando en la misma dirección y puerto
+se pueden bajar los servidores que se levantaron en la forma de ejecución #1
+docker-compose down --> para bajar el contenedor
+
+## OPCIÓN 3 – Cliente React (Frontend)
+
+navegar a la carpeta --> cd graphql-client
+instalar las dependencias --> npm install
+ejecutar react --> npm start
+dirección --> http://localhost:3000
+
+
